@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/src
+    environment:
+      - PHP_ENVIRONMENT=development
+      - APP_DEBUG=true
+      - APP_ENV=develop
